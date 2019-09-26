@@ -1,0 +1,71 @@
+mat-card {
+    margin: 5px;
+}
+
+.mat-drawer {
+    background-color: #303030;
+}
+
+.mat-drawer-side{
+    border-right: none;
+}
+
+.app-toolbar-filler {
+    flex: 1 1 auto;
+}
+
+.app-sidenav {
+    min-width: 100px;
+    padding: 10px;
+}
+
+.mat-toolbar-row{
+    flex-direction: inherit;
+}
+
+.app-container{
+    padding: 10px;
+}
+.spacer{
+    flex: 1 1 auto;
+}
+
+.alert{
+    max-width: 30%;
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: row;
+}
+.payment{
+    display: flex;
+    flex-direction: row;
+}
+.alerts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.account{
+    margin: 10px 5%;
+    display: flex;
+}
+
+.mat-display-3{
+    margin: 0 0 20px;
+}
+
+  .budget{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 5%;
+}
+  .ecz{
+    font-family: 'Eczar', serif;
+  }

@@ -1,1 +1,79 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500');
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto Condensed, sans-serif',
+);
+
+@include mat-core($custom-typography);
+
+$rally-theme-background: (
+    status-bar: black,
+    app-bar:    #303030,
+    background: #303030,
+    hover:      rgba(white, 0.04),
+    card:       map_get($mat-grey, 800),
+    dialog:     map_get($mat-grey, 800),
+    disabled-button: rgba(white, 0.12),
+    raised-button: map-get($mat-grey, 800),
+    focused-button: $light-focused,
+    selected-button: map_get($mat-grey, 900),
+    selected-disabled-button: map_get($mat-grey, 800),
+    disabled-button-toggle: black,
+    unselected-chip: map_get($mat-grey, 700),
+    disabled-list-option: black,
+);
+
+$rally-theme-foreground: (
+    base:              white,
+    divider:           $light-dividers,
+    dividers:          $light-dividers,
+    disabled:          $light-disabled-text,
+    disabled-button:   rgba(white, 0.3),
+    disabled-text:     $light-disabled-text,
+    elevation:         black,
+    hint-text:         $light-disabled-text,
+    secondary-text:    $light-secondary-text,
+    icon:              white,
+    icons:             white,
+    text:              white,
+    slider-min:        white,
+    slider-off:        rgba(white, 0.3),
+    slider-off-active: rgba(white, 0.3),
+);
+
+@function create-custom-theme($primary, $accent, $warn) {
+    @return (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+      is-dark: false,
+      foreground: $rally-theme-foreground,
+      background: $rally-theme-background,
+    );
+  }
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$rally-app-primary: mat-palette($mat-green, A200, A100, A400);
+$rally-app-accent:  mat-palette($mat-teal, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$rally-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$rally-app-theme: create-custom-theme($rally-app-primary, $rally-app-accent, $rally-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($rally-app-theme);
