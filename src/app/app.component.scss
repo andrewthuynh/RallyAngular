@@ -55,6 +55,7 @@ mat-card {
 .account{
     margin: 10px 5%;
     display: flex;
+    flex-direction: row;
 }
 
 .mat-display-3{
@@ -68,4 +69,31 @@ mat-card {
 }
   .ecz{
     font-family: 'Eczar', serif;
+  }
+
+  .div1 {
+    height: 2px;
+    background-color: #4ec19e;
+  }
+  
+  .div2 {
+    height: 2px;
+    background-color: #56adff;
+  }
+  .div3 {
+    height: 2px;
+    background-color: #b68de2;
+  }
+  .div4 {
+    height: 2px;
+    background-color: #e64242;
+  }
+  .div5 {
+    height: 2px;
+    background-color: #ff7156;
+  }
+
+  .color-tag{
+    width: 5px; 
+    margin: 5px;
   }
