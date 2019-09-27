@@ -9,12 +9,20 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import 'hammerjs';
 import { AppMaterialModule } from './app.material.module';
 import { RailnavComponent } from './railnav/railnav.component';
+import { AlertComponent } from './alert/alert.component';
+import { AccountComponent } from './account/account.component';
+import { BillComponent } from './bill/bill.component';
+import { BudgetComponent } from './budget/budget.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     RailnavComponent,
+    AlertComponent,
+    AccountComponent,
+    BillComponent,
+    BudgetComponent,
   ],
   imports: [
     BrowserModule,

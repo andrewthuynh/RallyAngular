@@ -1,0 +1,36 @@
+<mat-card>
+        <mat-card-content>
+            <mat-card-header>
+                <h3>Bills</h3>
+            </mat-card-header>
+            <mat-card-header>
+                <h1 class="mat-display-3 ecz">$ {{total}}</h1>
+            </mat-card-header>
+            <div fxLayout="row" fxLayoutGap="0px" style="width: 100%;">
+                <div fxFlex="13" class="part" style="background-color: #e64242"></div>
+                <div fxFlex="81" class="part" style="background-color: #f5ff66;"></div>
+                <div fxFlex="6" class="div5"></div>
+            </div>
+
+            <div class="column">
+                <div matRipple [matRippleCentered]="centered" [matRippleDisabled]="disabled"
+                    [matRippleUnbounded]="unbounded" [matRippleRadius]="radius" [matRippleColor]="color" *ngFor="let bill of bills">
+                    <section class="account">
+                        <div fxLayout="col" fxLayoutGap="0px" class="color-tag">
+                            <div fxFlex style="height: 30px;" [ngStyle]="{'background-color': bill.color}"></div>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: -8px">{{bill.title}}</h3>
+                            <h3 style="color: rgb(190, 190, 190)">{{bill.subtitle}}</h3>
+                        </div>
+                        <span class="spacer"></span>
+                        <h2 style="margin-right: 20px;" class="ecz">$ {{bill.amount}}</h2>
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                    </section>
+                </div>
+            </div>
+            <div class="alerts">
+                <button mat-button>SEE ALL</button>
+            </div>
+        </mat-card-content>
+    </mat-card>

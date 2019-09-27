@@ -1,0 +1,18 @@
+<mat-card>
+        <mat-card-content>
+            <mat-card-header>
+                <mat-card-title>Alerts</mat-card-title>
+                <span class="spacer"></span>
+                <button mat-button>SEE MORE</button>
+            </mat-card-header>
+            <mat-divider [inset]="true"></mat-divider>
+
+            <div class="alerts">
+                <section class="alert" *ngFor="let alert of alerts">
+                    <h4>{{alert.body}}</h4>
+                    <mat-icon>{{alert.icon}}</mat-icon>
+                </section>
+              
+            </div>
+        </mat-card-content>
+    </mat-card>

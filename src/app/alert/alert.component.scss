@@ -1,0 +1,19 @@
+mat-card {
+    margin: 5px;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.alert{
+    max-width: 30%;
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: row;
+}
+.alerts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

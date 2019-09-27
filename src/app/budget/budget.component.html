@@ -1,0 +1,37 @@
+<mat-card class="payment">
+        <mat-card-content style="min-width: 100%">
+            <mat-card-header>
+                <mat-card-title style="margin-left: 15%; white-space: nowrap;">{{month}} Budget</mat-card-title>
+            </mat-card-header>
+            <mat-card-header>
+                <h1 class="mat-display-3 ecz">$ {{spent}} <span style="font-size: 20px; margin-right: 10px;">Left
+                    </span><span style="color:gray">/ ${{total}}<span style="font-size: 20px;"> Total</span></span>
+                </h1>
+            </mat-card-header>
+            <div fxLayout="row" fxLayoutGap="0px" style="width: 100%;">
+                <div fxFlex="5" class="part" style="background-color: #F44336"></div>
+                <div fxFlex="9" class="part" style="background-color: #69F0AE;"></div>
+                <div fxFlex="7" class="part" style="background-color: #40C4FF"></div>
+                <div fxFlex="13" class="part" style="background-color: rgb(250, 48, 216)"></div>
+                <div fxFlex="9" class="div5"></div>
+                <div fxFlex="57" class="part" style="background-color: rgb(32, 32, 32)"></div>
+            </div>
+
+            <div class="column">
+
+                <section class="account" *ngFor="let budget of budgets">
+                    <div>
+                        <h3 style="margin-bottom: -8px; white-space: nowrap;">{{budget.title}}</h3>
+                        <h3 style="color: rgb(190, 190, 190)">${{budget.spent}}/${{budget.max}}</h3>
+                    </div>
+                    <mat-progress-bar mode="determinate" [value]="budget.left" style="flex-grow: 1; margin: 10px 20px;" [color]="budget.color">
+                    </mat-progress-bar>
+                    <h2 style="margin-right: 5px;">${{budget.max-budget.spent}}</h2>
+                    <h3 style="color: rgb(190, 190, 190)">left</h3>
+                </section>
+                <div class="alerts">
+                    <button mat-button>SEE ALL</button>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>

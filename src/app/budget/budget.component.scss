@@ -1,31 +1,6 @@
 mat-card {
     margin: 5px;
 }
-
-.mat-drawer {
-    background-color: #303030;
-}
-
-.mat-drawer-side{
-    border-right: none;
-}
-
-.app-toolbar-filler {
-    flex: 1 1 auto;
-}
-
-.app-sidenav {
-    min-width: 100px;
-    padding: 10px;
-}
-
-.mat-toolbar-row{
-    flex-direction: inherit;
-}
-
-.app-container{
-    padding: 10px;
-}
 .spacer{
     flex: 1 1 auto;
 }
@@ -33,10 +8,6 @@ mat-card {
 .alert{
     max-width: 30%;
     margin: 10px 20px;
-    display: flex;
-    flex-direction: row;
-}
-.payment{
     display: flex;
     flex-direction: row;
 }
@@ -87,3 +58,8 @@ mat-card {
     width: 5px; 
     margin: 5px;
   }
+
+  .payment{
+    display: flex;
+    flex-direction: row;
+}
