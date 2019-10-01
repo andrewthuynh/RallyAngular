@@ -13,6 +13,8 @@ import { AlertComponent } from './alert/alert.component';
 import { AccountComponent } from './account/account.component';
 import { BillComponent } from './bill/bill.component';
 import { BudgetComponent } from './budget/budget.component';
+import { OverviewComponent } from './overview/overview.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { BudgetComponent } from './budget/budget.component';
     AccountComponent,
     BillComponent,
     BudgetComponent,
+    OverviewComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,

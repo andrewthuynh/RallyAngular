@@ -3,14 +3,6 @@
         <app-railnav></app-railnav>
     </mat-sidenav>
     <mat-sidenav-content mode="side" opened>
-        <app-alert></app-alert>
-
-        <div class="payment">
-            <app-account style="width:50%"></app-account>
-
-            <app-bill style="width:50%"></app-bill>
-        </div>
-
-        <app-budget></app-budget>
+        <router-outlet #outlet="outlet"></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>

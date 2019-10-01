@@ -7,7 +7,7 @@ export class BudgetService {
 
   month = "September";
   tspent = '552.31'
-  total = '1210.00';
+  total = '1200.00';
 
   budgets = [
     {

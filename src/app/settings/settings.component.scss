@@ -1,0 +1,55 @@
+mat-card {
+    margin: 5px;
+}
+.spacer{
+    flex: 1 1 auto;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.account{
+    margin: 10px 5%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10%;
+}
+
+.mat-display-3{
+    margin: 0 0 20px;
+}
+
+  .budget{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 5%;
+  }
+
+  .part {
+    height: 2px;
+  }
+  .div3{
+    height: 2px;
+    background-color: #56adff;;
+  }
+  .div5 {
+    height: 2px;
+    background-color: #ff7156;
+  }
+
+  .color-tag{
+    width: 5px; 
+    margin: 5px;
+  }
+
+  .payment{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .marg{
+    margin-bottom: -8px; 
+    white-space: nowrap;
+  }

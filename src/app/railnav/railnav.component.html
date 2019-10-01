@@ -1,33 +1,35 @@
-<mat-toolbar>
-    <section class="mat-typography">
-        <mat-toolbar-row>
-            <img src="../../assets/rally-logo.png" width="50px" height="50px" />
-        </mat-toolbar-row>
-        <mat-toolbar-row>
-            <button mat-icon-button>
-                <mat-icon>pie_chart</mat-icon>
-                <h5>OVERVIEW</h5>
-            </button>
-        </mat-toolbar-row>
-        <mat-toolbar-row>
-            <button mat-icon-button>
-                <mat-icon class="icon-inactive">attach_money</mat-icon>
-            </button>
-        </mat-toolbar-row>
-        <mat-toolbar-row>
-            <button mat-icon-button>
-                <mat-icon class="icon-inactive">money_off</mat-icon>
-            </button>
-        </mat-toolbar-row>
-        <mat-toolbar-row>
-            <button mat-icon-button>
-                <mat-icon class="icon-inactive">bar_chart</mat-icon>
-            </button>
-        </mat-toolbar-row>
-        <mat-toolbar-row>
-            <button mat-icon-button>
-                <mat-icon class="icon-inactive">settings</mat-icon>
-            </button>
-        </mat-toolbar-row>
-    </section>
+<mat-toolbar class="mat-typography">
+    <mat-toolbar-row>
+        <img src="../../assets/rally-logo.png" width="50px" height="50px" />
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="this.railNav('overview')">
+            <mat-icon [ngClass]="{'icon-inactive': this.router.url.substring(1) != 'overview'}">pie_chart</mat-icon>
+            <h5 *ngIf="this.router.url.substring(1) == 'overview'">OVERVIEW</h5>
+        </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="this.railNav('accounts')">
+            <mat-icon [ngClass]="{'icon-inactive': this.router.url.substring(1) != 'accounts'}">attach_money</mat-icon>
+            <h5 *ngIf="this.router.url.substring(1) == 'accounts'">ACCOUNTS</h5>
+        </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="this.railNav('bills')">
+            <mat-icon [ngClass]="{'icon-inactive': this.router.url.substring(1) != 'bills'}">money_off</mat-icon>
+            <h5 *ngIf="this.router.url.substring(1) == 'bills'">BILLS</h5>
+        </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="this.railNav('budgets')">
+            <mat-icon [ngClass]="{'icon-inactive': this.router.url.substring(1) != 'budgets'}">bar_chart</mat-icon>
+            <h5 *ngIf="this.router.url.substring(1) == 'budgets'">BUDGETS</h5>
+        </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="this.railNav('settings')">
+            <mat-icon [ngClass]="{'icon-inactive': this.router.url.substring(1) != 'settings'}">settings</mat-icon>
+            <h5 *ngIf="this.router.url.substring(1) == 'settings'">SETTINGS</h5>
+        </button>
+    </mat-toolbar-row>
 </mat-toolbar>

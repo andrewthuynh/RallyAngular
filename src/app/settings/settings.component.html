@@ -1,0 +1,45 @@
+<mat-card class="payment">
+    <mat-card-content style="min-width: 100%">
+        <mat-card-header>
+            <mat-card-title style="margin-left: 15%; white-space: nowrap;">Settings</mat-card-title>
+        </mat-card-header>
+        <div fxLayout="row" fxLayoutGap="0px" style="width: 100%;">
+            <div fxFlex="20" class="part" style="background-color: #F44336"></div>
+            <div fxFlex="20" class="part" style="background-color: #69F0AE;"></div>
+            <div fxFlex="20" class="part" style="background-color: #40C4FF"></div>
+            <div fxFlex="20" class="part" style="background-color: rgb(250, 48, 216)"></div>
+            <div fxFlex="20" class="div5"></div>
+        </div>
+
+        <div class="column">
+
+            <section class="account">
+                <h3 class="marg">Currency</h3>
+                <div class="spacer"></div>
+                <mat-radio-group color="primary">
+                    <mat-radio-button name="dollar" value="dollar">$</mat-radio-button>
+                    <mat-radio-button name="pound" value="pound">£</mat-radio-button>
+                    <mat-radio-button name="yen"  value="yen">¥</mat-radio-button>
+                </mat-radio-group>
+            </section>
+            <section class="account">
+                <h3 class="marg">Auto-Update Accounts</h3>
+                <div class="spacer"></div>
+                <mat-slide-toggle [checked]="updateChecked" (change)="updateChecked = !updateChecked" color="primary">
+                </mat-slide-toggle>
+            </section>
+            <section class="account">
+                <h3 class="marg">Dark Theme</h3>
+                <div class="spacer"></div>
+                <mat-slide-toggle [checked]="darkChecked" (change)="darkChecked = !darkChecked" color="primary">
+                </mat-slide-toggle>
+            </section>
+            <section class="account">
+                <h3 class="marg">Animations</h3>
+                <div class="spacer"></div>
+                <mat-slide-toggle [checked]="aniChecked" (change)="aniChecked = !aniChecked" color="primary">
+                </mat-slide-toggle>
+            </section>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -23,7 +23,7 @@ export class BillService {
     {
       id: 2,
       title: 'Internet',
-      subtitle: 'Internet',
+      subtitle: 'Due Oct 2',
       amount: 64.99,
       color: '#ff7156'
     }
